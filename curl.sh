@@ -8,28 +8,28 @@ curl http://www.vitlug.com > vitlug-com.html
 -o (lowercase o) the result will be saved in the filename provided in the command line
 -O (uppercase O) the filename in the URL will be taken and it will be used as the filename to store the result
 '
-curl -o mygettext.html http://www.gnu.org/software/gettext/manual/gettext.html
+curl -o myproject.html https://nishalkulkarni.com/projects.html
 
-curl -O URL1 -O URL2
+# Downloading multiple files
+curl -O https://nishalkulkarni.com/projects.html -O https://nishalkulkarni.com/contact.html
 
 : '
 Start a big download using curl, and press Ctrl-C to stop it in between the download.
 '
-curl -O http://www.gnu.org/software/gettext/manual/gettext.html
-curl -C - -O http://www.gnu.org/software/gettext/manual/gettext.html
+curl -O https://nishalkulkarni.com/test.jpeg
+curl -C - -O https://nishalkulkarni.com/test.jpeg
 
 # Download using Ranges
-curl ftp://ftp.uk.debian.org/debian/pool/main/[a-z]/
+curl https://nishalkulkarni.com/[a-z]/
 
 # HTTP Authentication
 curl -u username:password URL
 
 # Download from ftp server
-curl -u ftpuser:ftppass -O ftp://ftp_server/public_html/xss.php
+curl -u 19BCE0243 -O ftp://studvol1.vit.ac.in/sample.txt
 
 # Upload files to a server
-
-curl -u ftpuser:ftppass -T "{file1,file2}" ftp://ftp.testserver.com
+curl -u 19BCE0243 -T sysmain.sh ftp://studvol1.vit.ac.in
 
 # Follow redirects
 curl -L http://www.google.com
